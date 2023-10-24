@@ -1,0 +1,140 @@
+*{/*universal selector*/
+  background-color: rgb(220, 226, 222);
+  font-family:'Courier New', Courier, monospace;
+}
+h3{
+    color: brown;
+}
+h1{
+    color:rgb(236, 28, 21);
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: rgb(219, 26, 36);
+    color:white; 
+    
+}
+/* by hover wecant change its prop because high specifity studied in below */
+#myid p{
+    color:grren;
+
+}
+.upvote{
+    background-color: rgb(21, 223, 61);
+    color:rgb(211, 185, 185);
+}
+/* 1111...descendent selectors */
+/* all selectors inside the div or span */
+/* if i type only 1 anchor tag then it applies to all anchor tag */
+ p .post{
+    color:purple;
+    background-color: aquamarine;
+}
+nav  a{
+    color:hotpink;
+}
+/* 222...adjacent sibiling combinator */
+/* after getting p getting h3 is getting */
+p+h3{
+    text-decoration: underline;
+}
+/* after upvote there is answer button  (how to aply color after it) */
+.upvote+button{
+    background-color: blue;
+    color:darkblue;
+}
+/* 333...child combinator or direct descendent.....we cant go multiple level like 1st one 
+   select direct children of spans */
+   div>input{
+    background-color: rgb(168, 132, 132);
+   }
+
+   /* dependent attributes value or type 
+   depends attributes can change style
+   linkhttps://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors*/
+   input[type="text"] {
+    color:rgb(25, 216, 92);
+    background-color: ghostwhite;
+    
+    
+   }
+   input[type="password"] {
+    color: rgb(241, 35, 66);
+    background-color: ghostwhite;
+   }
+   /* which have attribte type can change its background */
+   input[type{
+    background-color: ghostwhite;
+   }]
+   /* pseudo class ----->:a keyword add to selectoe a special sate of selected element
+    when we touch change its color
+                    1.element:hover--
+                    2.element:active
+                    3.eleemnt:checked
+                    4. element:nth  of type  */
+button:hover {
+    background-color: black;
+    
+        
+    }
+    /* this will change underline 
+    to  normal whwen we click on headin**/
+h3:hover {
+    text-decoration: none; 
+}
+
+/* 2.active ....when we click onbutton it changes*/
+button:active{
+    background-color: aqua;
+}
+/* when we click on para change to bold */
+p:active{
+    font-weight:bold;
+    color: green;
+}
+/* 3.checked :usualy in radio button like round dot chage its color */
+/* change the color of radio text */
+input[type="radio"]:checked+label{
+    color:brown;
+    font-weight:bold;
+}
+/* nth of type :if we have 5 elents like element if we need oddd num button is 
+difernt color and even is same */
+div:nth-of-type(2n){
+    background-color:rgb(246, 244, 239);
+}
+/* completed many more check in mdn website */
+
+/*next topic-----> pseudo elements (used to specify specific part  like 1st leter or last)
+                 1.::first-letter 
+                2. :: first line
+                3 ::first section */
+  /* 1.::first-letter this cahnges first letter of heading  */
+h1::first-letter{
+    color:black;
+}
+p::first-line{
+    color:rgb(72, 2, 2);
+}
+/* when we select perfect line than selected one become yellow */
+p::selection{
+    background-color: rgb(79, 194, 115);
+} 
+/* cascading style sheets--->casacde algorithm  1.if same eleemts  are given then
+                           by cascadewe can know what value given to the heading or other */
+
+h3{
+    background-color: aqua;
+}
+h3{
+   background-color: brown;
+    /*  more prioriy to this*/
+} 
+/* next:inline specifity is more tha id */
+ 
+
+
+
+

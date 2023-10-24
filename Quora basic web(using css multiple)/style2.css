@@ -1,0 +1,29 @@
+/*15.cascadind property says when muliple elements are there than 
+ priority to last eleement (only when same selectors)*/
+h3{
+    background-color: blue;
+}
+/* last one have moe priority */
+h3{
+    background-color: aqua;
+}
+/* note:if not same then we see selector specifity
+what is specifity?
+calculate the  weight that is applied to given css declaration
+------>calculated by 3 digits places __id,___class,___attribut &pesudo-element
+,element &pesudo-element */
+
+/* !important is property more specifity we cant change */
+h3{
+    background-color: antiquewhite !important;
+}
+/* inheritance in css --->qualitie from 1 to another like birth 1st grand pa ,next father,his son*/
+/* example div is grand parent if we give color it passses to all like h ,p etc */
+
+/* background color of input cant inherit we should specidy the selector 
+div{
+     background-color:inherit;
+}
+input{
+    background-color:inherit;
+} it will inherit color of div now same button */
